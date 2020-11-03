@@ -88,13 +88,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0-nullsafety.1"
-  simple_permissions:
+  path_provider:
     dependency: "direct main"
     description:
-      name: simple_permissions
+      name: path_provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.9"
+    version: "0.4.1"
   sky_engine:
     dependency: transitive
     description: flutter

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wifi_flutter/wifi_flutter.dart';
 import 'dart:io';
 import 'dart:convert';
-import 'package:simple_permissions/simple_permissions.dart';
 
 
 void main() => runApp(MyApp());
@@ -45,7 +44,6 @@ class _MyAppState extends State<MyApp> {
             ap1=[0];
             ap2=[0];
             ap3=[0];
-            SimplePermissions.requestPermission(Permission.ReadExternalStorage);
             final noPermissions = await WifiFlutter.promptPermissions();
             if (noPermissions) {
               return;

@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   wifi_flutter: ^0.1.0+1
-  simple_permissions: ^0.1.9
+
 
 
 

@@ -185,8 +185,6 @@ class _MyAppState extends State<MyApp> {
                   });
                 }
 
-
-
                 print((myController.text));
                 //Directory tempDir = await getExternalStorageDirectory();
                 Directory tempDir = await getApplicationDocumentsDirectory();

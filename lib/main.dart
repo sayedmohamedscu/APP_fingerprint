@@ -184,15 +184,7 @@ class _MyAppState extends State<MyApp> {
                     //print(ap3);
                   });
                 }
-                while (i < 50) {
-                  Text(
-                    '${i - 1} Samples Has Been Scanned!',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  );
-                }
+
                 //var json = jsonEncode(ap1, toEncodable: (e) => e.toJsonAttr());
                 //String rawJson = jsonEncode(ap1);
                 //print(rawJson);
@@ -219,20 +211,16 @@ class _MyAppState extends State<MyApp> {
                 String contents = await file.readAsString();
                 print(contents);
               }),
-
-          //sayed
-
-          // Padding(
-          //   padding: const EdgeInsets.only(top: 75),
-          //   child:
-          //   Text(
-          //     '${i - 1} Samples Has Been Scanned!',
-          //     style: TextStyle(
-          //       fontSize: 20,
-          //       color: Colors.white,
-          //     ),
-          //   ),
-          // )
+          Padding(
+            padding: const EdgeInsets.only(top: 75),
+            child: Text(
+              '$i Samples Has Been Scanned!',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+          )
         ],
       ),
     ));

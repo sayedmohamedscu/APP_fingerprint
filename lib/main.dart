@@ -185,6 +185,15 @@ class _MyAppState extends State<MyApp> {
                   });
                 }
 
+                //var json = jsonEncode(ap1, toEncodable: (e) => e.toJsonAttr());
+                //String rawJson = jsonEncode(ap1);
+                //print(rawJson);
+                //File('/data/user/0/com.example.flutter_appf/assets/sayed.txt').writeAsString('$ap1');
+
+                //Future<String> loadAsset() async {
+                //return await rootBundle.loadString('assets/sayed.txt');
+                //  }
+
                 print((myController.text));
                 //Directory tempDir = await getExternalStorageDirectory();
                 Directory tempDir = await getApplicationDocumentsDirectory();

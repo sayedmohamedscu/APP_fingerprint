@@ -12,9 +12,17 @@ void main() {
 }
 
 /// This is the main application widget.
-class CreateApp extends StatelessWidget {
+class CreateApp extends StatefulWidget {
+  static Directory folderPath;
+
+  @override
+  _CreateAppState createState() => _CreateAppState();
+}
+
+class _CreateAppState extends State<CreateApp> {
   var _name;
   final nameCon = new TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +77,10 @@ class CreateApp extends StatelessWidget {
                                 MaterialPageRoute(builder: (context) => Screen2()),
                               );
                             }
+                            setState((){
+                              folderPath = Directory("storage/emulated/0/$folderName");
+                            });
+
 
 
                           })

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart'; //add path provider dart plugin on pubspec.yaml file
 import 'package:permission_handler/permission_handler.dart';
 import 'main.dart';
+import 'main.dart';
 
 void main() {
   runApp(Screen2());
@@ -195,7 +196,7 @@ class _Screen2State extends State<Screen2> {
 
                 print((myController.text));
 
-                Directory tempDir = main.path;
+                Directory tempDir = CreateApp.folderPath;
                 // Directory tempDir = await getApplicationDocumentsDirectory();
 
                 String tempPath = tempDir.path;

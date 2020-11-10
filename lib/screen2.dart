@@ -6,6 +6,7 @@ import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart'; //add path provider dart plugin on pubspec.yaml file
 import 'package:permission_handler/permission_handler.dart';
+import 'main.dart';
 
 void main() {
   runApp(Screen2());
@@ -40,9 +41,7 @@ class _Screen2State extends State<Screen2> {
       backgroundColor: Colors.teal[900],
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: Center(
-          child: Text('RSSI Collector'),
-        ),
+        title: Text('RSSI Collector'),
       ),
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
@@ -196,7 +195,7 @@ class _Screen2State extends State<Screen2> {
 
                 print((myController.text));
 
-                Directory tempDir = await getExternalStorageDirectory();
+                Directory tempDir = main.path;
                 // Directory tempDir = await getApplicationDocumentsDirectory();
 
                 String tempPath = tempDir.path;

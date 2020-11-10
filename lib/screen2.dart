@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart'; //add path provider dart plugin on pubspec.yaml file
+import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   runApp(Screen2());
@@ -194,8 +195,9 @@ class _Screen2State extends State<Screen2> {
                 //  }
 
                 print((myController.text));
-                //Directory tempDir = await getExternalStorageDirectory();
-                Directory tempDir = await getApplicationDocumentsDirectory();
+
+                Directory tempDir = await getExternalStorageDirectory();
+                // Directory tempDir = await getApplicationDocumentsDirectory();
 
                 String tempPath = tempDir.path;
                 print(tempPath);
@@ -208,6 +210,11 @@ class _Screen2State extends State<Screen2> {
                 File(tempPath + "/" + '$nameOfArea' + '.txt')
                     .writeAsString('$results');
                 String contents = await file.readAsString();
+                var status = await Permission.storage.status;
+                if (!status.isGranted) {
+                  await Permission.storage.request();
+                }
+
                 print(contents);
               }),
           Padding(
